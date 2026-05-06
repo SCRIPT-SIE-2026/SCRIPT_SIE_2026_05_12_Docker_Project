@@ -10,7 +10,7 @@
 
 # Source: https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
 # -----------------------------------------------------------------------------------------------
-# Step 1: Choose a pertient image base 
+# Step 1: Choose a pertinent image base 
 # Base image
 FROM python:3.11    
 
