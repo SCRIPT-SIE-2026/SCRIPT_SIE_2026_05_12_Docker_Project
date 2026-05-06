@@ -1,0 +1,12 @@
+{
+  "dockerComposeFile": [
+    "../compose.yml",
+    "compose.extend.yml"
+  ],
+  "service": "compute",
+  "runServices": [
+    "compute"
+  ],
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose"
+}

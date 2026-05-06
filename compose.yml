@@ -6,7 +6,6 @@ services:
     volumes:
       - ./results:/app/results
     command: python src/compute.py
-
   report:
     image: texlive/texlive:latest
     depends_on:

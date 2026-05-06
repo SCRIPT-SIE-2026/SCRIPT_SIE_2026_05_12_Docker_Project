@@ -1,0 +1,7 @@
+services:
+  compute:
+    volumes:
+      - .:/app
+    command: sleep infinity
+
+
