@@ -1,0 +1,18 @@
+services:
+  compute:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./results:/app/results
+    command: python src/compute.py
+
+  report:
+    image: texlive/texlive:latest
+    depends_on:
+      compute:
+        condition: service_completed_successfully
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c "cd /app/report && pdflatex -output-directory=/app/results main.tex"
