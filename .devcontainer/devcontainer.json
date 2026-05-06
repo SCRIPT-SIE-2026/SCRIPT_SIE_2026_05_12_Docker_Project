@@ -1,0 +1,4 @@
+{
+  "name": "My Developement Container",
+  "image": "python:3.11"
+}
