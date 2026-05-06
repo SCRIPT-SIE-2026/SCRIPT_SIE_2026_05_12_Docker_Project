@@ -16,13 +16,16 @@ FROM python:3.11
 
 ## Step 2: Install necessary packages
 # Add needed python modules
-RUN ...
+RUN pip install numpy matplotlib
 
 ## Step 3: Setup a working directory at /app
-WORKDIR ...
+WORKDIR /app
 
 ## Step 4: Copy the content of the current directory to /app directory of the container
-COPY ...
-
+COPY . .
 ## Step 5: Make the need changes to execute compute.py when the container is launch
-CMD ["bash"]
+CMD ["python", "src/compute.py" ]
+
+# To build and run you this files 
+# docker build -t sci-project .
+# docker run -it sci-project
