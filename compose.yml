@@ -1,0 +1,12 @@
+services:
+  compute:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scientific-contnainer # optional
+    volumes:
+      - ./results:/app/results
+    command: python src/compute.py
+    # alternative if you want to keep your service alive
+    # command: bash -c "python src/compute.py && bash" 
+    # tty: true 
