@@ -1,0 +1,18 @@
+services:
+  sensor:
+    build:
+      context: .
+      dockerfile: Dockerfile.sensor
+    ports:
+      - "1234:1234"
+
+  notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile.notebook
+    ports:
+      - "8888:8888"
+    depends_on:
+      - sensor
+    volumes:
+      - ./src:/app/src

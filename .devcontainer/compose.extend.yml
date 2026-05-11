@@ -1,0 +1,3 @@
+services:
+  sensor:
+    command: bash -c "python src/sensor.py 0.0.0.0 1234 && bash"

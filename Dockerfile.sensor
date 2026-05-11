@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY src/sensor.py src/sensor.py
+
+CMD ["python", "src/sensor.py", "0.0.0.0", "1234"]

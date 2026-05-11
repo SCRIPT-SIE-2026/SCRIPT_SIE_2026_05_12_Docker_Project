@@ -1,0 +1,13 @@
+{
+  "dockerComposeFile": [
+    "../compose.yml",
+    "compose.extend.yml"      // Overriding default compose.yml if need
+  ],
+  "service": "notebook", // Service used as the development container
+    "runServices": [          // Services started when opening the Dev Container
+    "sensor",
+    "notebook"
+  ],
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose"
+}
